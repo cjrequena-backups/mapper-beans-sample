@@ -8,11 +8,11 @@ import ma.glasnost.orika.MapperFacade;
 import ma.glasnost.orika.MapperFactory;
 import ma.glasnost.orika.impl.DefaultMapperFactory;
 
-public class OrikaSampleMap extends OrikaAbstractMap {
+public class OrikaSampleMapper extends OrikaAbstractMapper {
 
 	private MapperFacade mapper;
 
-	public OrikaSampleMap() {
+	public OrikaSampleMapper() {
 		final MapperFactory mapperFactory = new DefaultMapperFactory.Builder().build();
 		mapperFactory.classMap(SampleDTO.class, SampleEntity.class)//
 				.field("id", "idEntity") //

@@ -13,7 +13,7 @@ import com.sample.entity.SampleEntity;
  *         Mapping between entity beans and dto beans.
  */
 
-public class ModelMapperSampleMap extends ModelMapperAbstractMap {
+public class ModelMapperSampleMapper extends ModelMapperAbstractMapper {
 
 	/**
 	 * ModelMapper : bean to bean mapping library.
@@ -23,7 +23,7 @@ public class ModelMapperSampleMap extends ModelMapperAbstractMap {
 	/**
 	 * Constructor.
 	 */
-	public ModelMapperSampleMap() {
+	public ModelMapperSampleMapper() {
 		modelMapper = new ModelMapper();
 		modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
 	}

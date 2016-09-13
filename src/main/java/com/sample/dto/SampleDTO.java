@@ -1,20 +1,36 @@
 package com.sample.dto;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
+
 
 public class SampleDTO implements Serializable {
 
-	private static final long serialVersionUID = 1L;
-	private long id;
+    private Integer id;
 	private String firstName;
 	private String lastName;
 	private String email;
 
-	public long getId() {
+    public SampleDTO(){
+
+    }
+
+    public SampleDTO(Integer id, String firstName, String lastName, String email){
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+    }
+
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 

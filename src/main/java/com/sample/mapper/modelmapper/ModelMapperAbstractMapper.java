@@ -13,7 +13,7 @@ import org.modelmapper.ModelMapper;
  * 
  *         Common mapping methods.
  */
-public abstract class ModelMapperAbstractMap {
+public abstract class ModelMapperAbstractMapper {
 
 	/**
 	 * Get ModelMapper.

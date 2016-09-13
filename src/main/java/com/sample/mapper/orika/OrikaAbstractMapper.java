@@ -13,7 +13,7 @@ import ma.glasnost.orika.MapperFacade;
  * 
  *         Common mapping methods.
  */
-public abstract class OrikaAbstractMap {
+public abstract class OrikaAbstractMapper {
 
 	protected abstract MapperFacade getMapper();
 

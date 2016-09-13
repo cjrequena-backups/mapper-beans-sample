@@ -2,44 +2,54 @@ package com.sample.entity;
 
 import java.io.Serializable;
 
+
 public class SampleEntity implements Serializable {
+    private Integer idEntity;
+    private String firstName;
+    private String lastName;
+    private String email;
 
-	private static final long serialVersionUID = 1L;
-	private Integer idEntity;
-	private String firstName;
-	private String lastName;
-	private String email;
+    public SampleEntity() {
 
-	public Integer getIdEntity() {
-		return idEntity;
-	}
+    }
 
-	public void setIdEntity(Integer idEntity) {
-		this.idEntity = idEntity;
-	}
+    public SampleEntity(Integer idEntity, String firstName, String lastName, String email) {
+        this.idEntity = idEntity;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+    }
 
-	public String getFirstName() {
-		return firstName;
-	}
+    public Integer getIdEntity() {
+        return idEntity;
+    }
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
+    public void setIdEntity(Integer idEntity) {
+        this.idEntity = idEntity;
+    }
 
-	public String getLastName() {
-		return lastName;
-	}
+    public String getFirstName() {
+        return firstName;
+    }
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
-	public String getEmail() {
-		return email;
-	}
+    public String getLastName() {
+        return lastName;
+    }
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
 }
