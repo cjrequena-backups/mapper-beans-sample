@@ -15,8 +15,12 @@ public class OrikaSampleMapperTest {
     @Test
     public void testMapEntityToDTO() throws Exception {
         //given
-        SampleEntity sampleEntity = new SampleEntity(1, "FirstName", "LastName", "sample@email.com");
-        //when
+        SampleEntity sampleEntity = new SampleEntity();
+        sampleEntity.setIdEntity(1);
+        sampleEntity.setFirstName("FirstName");
+        sampleEntity.setLastName("LastName");
+        sampleEntity.setEmail("email@email.com");
+        //when    //when
         OrikaSampleMapper orikaSampleMapper = new OrikaSampleMapper();
         SampleDTO sampleDTO = orikaSampleMapper.mapEntityToDTO(sampleEntity);
         //then
@@ -26,8 +30,11 @@ public class OrikaSampleMapperTest {
     @Test
     public void testMapDTOToEntity() throws Exception {
         //given
-        SampleDTO sampleDTO = new SampleDTO(1, "FirstName", "LastName", "sample@email.com");
-        //when
+        SampleDTO sampleDTO = new SampleDTO();
+        sampleDTO.setId(1);
+        sampleDTO.setFirstName("FirstName");
+        sampleDTO.setLastName("LastName");
+        sampleDTO.setEmail("email@email.com");      //when
         OrikaSampleMapper orikaSampleMapper = new OrikaSampleMapper();
         SampleEntity sampleEntity = orikaSampleMapper.mapDTOToEntity(sampleDTO);
         //then

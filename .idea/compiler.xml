@@ -17,16 +17,27 @@
       <profile default="true" name="Default" enabled="false">
         <processorPath useClasspath="true" />
       </profile>
-      <profile default="false" name="Annotation profile for mapper-beans-sample" enabled="true">
+      <profile default="false" name="Annotation profile for mapper" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processor name="org.mapstruct.ap.MappingProcessor" />
         <processorPath useClasspath="true" />
-        <module name="mapper-beans-sample" />
+        <module name="mapper" />
+      </profile>
+      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="dto" />
+        <module name="entity" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="dto" target="1.5" />
+      <module name="entity" target="1.5" />
+      <module name="mapper" target="1.5" />
       <module name="mapper-beans-sample" target="1.5" />
     </bytecodeTargetLevel>
   </component>

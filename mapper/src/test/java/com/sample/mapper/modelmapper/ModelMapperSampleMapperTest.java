@@ -14,7 +14,11 @@ public class ModelMapperSampleMapperTest {
     @Test
     public void testMapEntityToDTO() throws Exception {
         //given
-        SampleEntity sampleEntity = new SampleEntity(1, "FirstName", "LastName", "sample@email.com");
+        SampleEntity sampleEntity = new SampleEntity();
+        sampleEntity.setIdEntity(1);
+        sampleEntity.setFirstName("FirstName");
+        sampleEntity.setLastName("LastName");
+        sampleEntity.setEmail("email@email.com");
         //when
         ModelMapperSampleMapper modelMapperSampleMapper = new ModelMapperSampleMapper();
         SampleDTO sampleDTO = modelMapperSampleMapper.mapEntityToDTO(sampleEntity);
@@ -25,7 +29,11 @@ public class ModelMapperSampleMapperTest {
     @Test
     public void testMapDTOToEntity() throws Exception {
         //given
-        SampleDTO sampleDTO = new SampleDTO(1, "FirstName", "LastName", "sample@email.com");
+        SampleDTO sampleDTO = new SampleDTO();
+        sampleDTO.setId(1);
+        sampleDTO.setFirstName("FirstName");
+        sampleDTO.setLastName("LastName");
+        sampleDTO.setEmail("email@email.com");
         //when
         ModelMapperSampleMapper modelMapperSampleMapper = new ModelMapperSampleMapper();
         SampleEntity sampleEntity = new SampleEntity();

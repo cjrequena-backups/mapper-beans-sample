@@ -16,8 +16,12 @@ public class MapStructSampleMapperTest {
     @Test
     public void testSampleEntityToSampleDTO() throws Exception {
         //given
-        SampleEntity sampleEntity = new SampleEntity(1, "FirstName", "LastName", "sample@email.com");
-        //when
+        SampleEntity sampleEntity = new SampleEntity();
+        sampleEntity.setIdEntity(1);
+        sampleEntity.setFirstName("FirstName");
+        sampleEntity.setLastName("LastName");
+        sampleEntity.setEmail("email@email.com");
+        //when     //when
         SampleDTO sampleDTO = MapStructSampleMapper.INSTANCE.sampleEntityToSampleDTO(sampleEntity);
         //then
         assertTrue(sampleDTO!=null);

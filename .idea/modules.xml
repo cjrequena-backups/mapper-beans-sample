@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/dto/dto.iml" filepath="$PROJECT_DIR$/dto/dto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/entity/entity.iml" filepath="$PROJECT_DIR$/entity/entity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mapper/mapper.iml" filepath="$PROJECT_DIR$/mapper/mapper.iml" />
       <module fileurl="file://$PROJECT_DIR$/mapper-beans-sample.iml" filepath="$PROJECT_DIR$/mapper-beans-sample.iml" />
     </modules>
   </component>
